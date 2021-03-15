@@ -17,7 +17,38 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 6.5rem)) 1fr;
-  grid-template-rows: 9.6rem min-content min-content min-content; }
+  grid-template-rows: 6.8rem min-content min-content min-content; }
 
 .navbar {
-  background-color: royalblue; }
+  grid-column: 1 / -1;
+  border: 1px solid #000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .navbar__items > * {
+    text-decoration: none;
+    margin: .5rem;
+    padding: .3rem;
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #078604;
+    text-transform: uppercase;
+    transition: all ease .2s; }
+  .navbar__items > *:hover {
+    border-bottom: 1.5px solid #078604; }
+  .navbar__btn {
+    color: #fff;
+    background: #009245;
+    width: 12.7rem;
+    height: 4rem;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 8rem; }
