@@ -1,0 +1,21 @@
+.chairman {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  &__image {
+    float: right;
+    display: block;
+  }
+
+  &__text {
+    &-heading {
+      font-family: Montserrat;
+      font-size: 3.3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 6.3rem;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
