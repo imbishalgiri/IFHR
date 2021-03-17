@@ -1,10 +1,13 @@
 .chairman {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
-
+  padding: 3rem;
+  margin: 2rem 5rem;
   &__image {
     float: right;
     display: block;
+    margin: 0 2rem 2rem 4rem;
+    height: 39vw;
   }
 
   &__text {
@@ -16,6 +19,17 @@
       line-height: 6.3rem;
       letter-spacing: 0em;
       text-align: left;
+      color: rgba(7, 134, 4, 0.91);
+    }
+
+    p {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 185.2%;
+      letter-spacing: 0.03em;
+      color: #232725;
     }
   }
 }
