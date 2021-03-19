@@ -114,3 +114,26 @@ body {
     line-height: 185.2%;
     letter-spacing: 0.03em;
     color: #232725; }
+
+.glimpse {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background: linear-gradient(207deg, rgba(66, 133, 186, 0.52) 21.72%, rgba(66, 133, 186, 0.52) 21.73%, rgba(151, 172, 151, 0.52) 98.62%, rgba(7, 134, 4, 0.4264) 98.63%, rgba(13, 85, 30, 0.118519) 98.64%, rgba(14, 95, 13, 0) 98.65%); }
+  .glimpse__text {
+    flex: 1 0 25rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 185.2%;
+    letter-spacing: 0.03em;
+    color: #232725; }
+  .glimpse__image {
+    flex: 1 0 25rem;
+    width: 62.3rem;
+    filter: drop-shadow(9px 16px 50px rgba(54, 47, 47, 0.25)); }
