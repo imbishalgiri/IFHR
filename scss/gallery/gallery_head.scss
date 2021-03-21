@@ -1,6 +1,7 @@
 .gallery {
   position: relative;
-  height: 25rem;
+  height: 18rem;
+  grid-column: 1 / -1;
 
   &__image {
     position: absolute;
