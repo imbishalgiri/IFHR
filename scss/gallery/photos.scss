@@ -2,14 +2,31 @@
   grid-column: 5 / -1;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 4rem;
+  margin-left: -12rem;
 
   &__item {
+    width: 25.3rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
+    text-decoration: none;
+    padding: 2rem;
+  }
+
+  &__caption {
+    color: #065fa6;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: -3rem;
   }
 }
 
 .photos > a > img {
-  height: 15rem;
+  height: 29rem;
+  object-fit: cover;
 }

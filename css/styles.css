@@ -143,12 +143,12 @@ body {
   height: 18rem;
   grid-column: 1 / -1; }
   .gallery__text {
-    color: #03592c;
+    color: #3ba537;
     font-family: Montserrat;
     font-weight: bold;
     font-size: 2.3rem;
     grid-column: 1 / -1;
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -196,16 +196,32 @@ body {
       font-size: 1.4rem;
       line-height: 185.2%;
       margin-left: 0.8rem;
-      color: #fcfffc; }
+      color: #fcfffc;
+      align-self: center; }
 
 .photos {
   grid-column: 5 / -1;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 4rem;
+  margin-left: -12rem; }
   .photos__item {
+    width: 25.3rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue; }
+    background-color: aliceblue;
+    text-decoration: none;
+    padding: 2rem; }
+  .photos__caption {
+    color: #065fa6;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: -3rem; }
 
 .photos > a > img {
-  height: 15rem; }
+  height: 29rem;
+  object-fit: cover; }
