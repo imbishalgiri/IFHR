@@ -1,0 +1,15 @@
+.photos {
+  grid-column: 5 / -1;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+  }
+}
+
+.photos > a > img {
+  height: 15rem;
+}

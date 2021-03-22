@@ -3,6 +3,18 @@
   height: 18rem;
   grid-column: 1 / -1;
 
+  &__text {
+    color: #03592c;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2.3rem;
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__image {
     position: absolute;
     width: 100vw;

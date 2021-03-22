@@ -140,7 +140,18 @@ body {
 
 .gallery {
   position: relative;
-  height: 25rem; }
+  height: 18rem;
+  grid-column: 1 / -1; }
+  .gallery__text {
+    color: #03592c;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2.3rem;
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .gallery__image {
     position: absolute;
     width: 100vw;
@@ -157,7 +168,44 @@ body {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 3.4rem;
+    font-size: 2.5rem;
     line-height: 185.2%;
     text-align: center;
     color: #e3e7ed; }
+
+.vertnav {
+  grid-column: 2 / 5;
+  height: 78.4rem;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  transform: translateX(-15rem);
+  background-color: #065fa6;
+  color: #fcfffc;
+  display: flex;
+  flex-direction: column; }
+  .vertnav__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4rem;
+    margin: 0.5rem 0; }
+    .vertnav__item-name {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 185.2%;
+      margin-left: 0.8rem;
+      color: #fcfffc; }
+
+.photos {
+  grid-column: 5 / -1;
+  display: flex;
+  flex-wrap: wrap; }
+  .photos__item {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue; }
+
+.photos > a > img {
+  height: 15rem; }

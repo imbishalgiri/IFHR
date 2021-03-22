@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css " />
+    <link rel="stylesheet" href="../node_modules/lightgallery.js/dist/css/lightgallery.min.css " />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400;500;900&family=Cookie&display=swap"
@@ -38,14 +39,54 @@
       />
       <div class="gallery__overlay">image gallery</div>
     </div>
+
+    <div class="gallery__text">Some visual look at our activities</div>
+
     <!-- end of gallery head -->
     <div class="vertnav">
       <div class="vertnav__item">
-        img
-        <div class="vertnav__item-name">Vision & mission</div>
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Vision & Mission</div>
+      </div>
+      <div class="vertnav__item">
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Objectives</div>
+      </div>
+      <div class="vertnav__item">
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Photos</div>
+      </div>
+      <div class="vertnav__item">
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Videos</div>
+      </div>
+      <div class="vertnav__item">
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Query Section</div>
+      </div>
+      <div class="vertnav__item">
+        <img class="vertnav__item-image" src="../assets/sidebar__logo.svg" alt="sidebar__arrow">
+        <div class="vertnav__item-name">Teams</div>
       </div>
       </div>
     </div>
+
+    <div class="photos" id="lightgallery">
+      <a href="../assets/glimpse-image.png" class="photos__item">
+        <img src="../assets/glimpse-image.png" />
+        <div class="photos__caption">I am image 1</div>
+      </a>
+      <a href="../assets/glimpse-image.png" class="photos__item">
+        <img src="../assets/glimpse-image.png" />
+        <div class="photos__caption">I am image 2</div>
+      </a> 
+    </div>
+     
+    <script src="../node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
+     <!-- <script src="../node_modules/lightgallery.js/src/js/lg-utils.js"></script> -->
+      <script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery')); 
+</script>
 
   </body>
 </html>
