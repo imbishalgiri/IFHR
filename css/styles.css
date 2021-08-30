@@ -149,7 +149,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 2rem;
-  align-items: center; }
+  align-items: start; }
   .nav__link:link, .nav__link:visited {
     font-size: 1.4rem;
     color: #fff;
@@ -168,6 +168,62 @@ body {
   color: #fff;
   margin-top: 6rem;
   text-align: center; }
+
+.form__input {
+  padding: .5rem;
+  margin: .5rem 0rem;
+  border: none;
+  border-radius: 5px;
+  width: 30rem; }
+
+.form__title {
+  color: #000;
+  font-size: 1.6rem; }
+
+.submit__btn {
+  padding: .5rem;
+  width: 10rem;
+  color: #fff;
+  background-color: #009245;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  cursor: pointer; }
+  .submit__btn:hover {
+    color: #009245;
+    background: #fff; }
+
+.contact__head {
+  color: #000;
+  font-size: 1.6rem; }
+
+.contact__details {
+  font-size: 1.2rem; }
+
+.contact__mobile {
+  font-size: 1.5rem;
+  margin: 0 1rem; }
+
+.icon {
+  margin: 0 1.5rem; }
+  .icon__google {
+    font-size: 2rem;
+    color: #fff;
+    background: #DB4437;
+    padding: .7rem;
+    border-radius: 50%; }
+  .icon__facebook {
+    font-size: 3rem;
+    color: #fff;
+    background: #4267B2;
+    padding: -1rem; }
+  .icon__instagram {
+    font-size: 3rem;
+    background: -webkit-linear-gradient(#405DE6, #833AB4, #C13584, #C13584, #FD1D1D, #FCAF45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.social__head {
+  font-size: 1.5rem; }
 
 .gallery {
   position: relative;
@@ -207,7 +263,7 @@ body {
 .vertnav {
   grid-column: 2 / 5;
   height: 78.4rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding-top: 5rem;
   transform: translateX(-15rem);
   background-color: #065fa6;
@@ -256,3 +312,33 @@ body {
 .photos > a > img {
   height: 29rem;
   object-fit: cover; }
+
+.intro {
+  grid-column: 5 / -1;
+  margin-top: 3rem;
+  margin-left: -8rem; }
+  .intro__vision-heading {
+    color: #078604;
+    font-size: 3.2rem;
+    font-family: Roboto;
+    font-weight: 500; }
+  .intro__vision-des {
+    font-size: 1.5rem;
+    font-family: Roboto; }
+  .intro__mission-heading {
+    color: #078604;
+    font-size: 3.2rem;
+    font-family: Roboto;
+    font-weight: 500; }
+  .intro__mission-des {
+    font-size: 1.5rem;
+    font-family: Roboto; }
+
+.objective__item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  margin-top: 2rem; }
+
+.objective__item > * {
+  margin: 0 0.5rem; }
