@@ -16,6 +16,13 @@
     padding-left: 4rem;
     margin: 0.5rem 0;
 
+    &-logo {
+      width: 1rem;
+      height: 1rem;
+      background: #fff;
+      border-radius: 2px;
+    }
+
     &-name {
       font-family: Montserrat;
       font-style: normal;
@@ -26,5 +33,16 @@
       color: #fcfffc;
       align-self: center;
     }
+
   }
+
+  &__item:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+}
+
+.vertnav a {
+  text-decoration: none;
 }

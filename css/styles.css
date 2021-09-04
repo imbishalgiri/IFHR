@@ -18,17 +18,24 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 6.5rem)) 1fr;
-  grid-template-rows: 6.8rem min-content min-content min-content; }
+  grid-template-rows: 12rem min-content min-content min-content; }
 
 .navbar {
   grid-column: 1 / -1;
   padding: 5px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between; }
+  height: 10rem; }
+  .navbar__items {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c6e8c5; }
   .navbar__items > * {
     text-decoration: none;
-    margin: .5rem;
+    margin: .5rem 1rem;
     padding: .3rem;
     font-family: Montserrat;
     font-size: 1.4rem;
@@ -52,25 +59,49 @@ body {
     text-transform: uppercase;
     font-weight: 400;
     margin-right: 8rem; }
+  .navbar__texts {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1rem 0; }
+  .navbar__right {
+    display: flex;
+    margin: 0 6rem;
+    align-items: center;
+    justify-content: center; }
+  .navbar__right > * {
+    background: #009245;
+    color: #fff;
+    padding: 0.8rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 0.2rem; }
+  .navbar__heading {
+    color: #065fa6;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 3rem; }
+  .navbar__homebtn {
+    font-size: 1.2rem;
+    margin: 0 2rem; }
+  .navbar__homebtn > * {
+    margin: 0 .5rem; }
+
+.homelink {
+  text-decoration: none;
+  color: #000; }
 
 .main {
   grid-column: 1 / -1;
   position: relative;
   height: 70vh;
   width: 100vw;
-  background: url(../assets/main-image.png);
-  background-size: cover; }
-  .main__image {
-    width: 100vw;
+  overflow: hidden; }
+  .main__image-overlay {
     position: absolute;
-    top: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-    .main__image-overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(17, 82, 16, 0.31);
-      backdrop-filter: blur(2.5px); }
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 82, 16, 0.31);
+    backdrop-filter: blur(2.5px); }
   .main__quotation {
     position: absolute;
     background-color: #009245;
@@ -86,6 +117,40 @@ body {
     justify-content: center;
     font-size: 5rem;
     line-height: 5.5rem; }
+
+.slide {
+  height: 70vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute;
+  opacity: 0;
+  animation: fade 20s infinite; }
+
+.slide1 {
+  background: url(../assets/main-image.png);
+  height: 70vh; }
+
+.slide2 {
+  background: url(../assets/groupImg2.jpg);
+  animation-delay: 5s; }
+
+.slide3 {
+  background: url(../assets/groupImg1.jpg) no-repeat center center;
+  animation-delay: 10s; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 1; }
+  25% {
+    opacity: 1; }
+  30% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  70% {
+    opacity: 0; } }
 
 .chairman {
   grid-column: 1 / -1;
@@ -235,7 +300,7 @@ body {
     font-weight: bold;
     font-size: 2.3rem;
     grid-column: 1 / -1;
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -276,6 +341,11 @@ body {
     justify-content: flex-start;
     padding-left: 4rem;
     margin: 0.5rem 0; }
+    .vertnav__item-logo {
+      width: 1rem;
+      height: 1rem;
+      background: #fff;
+      border-radius: 2px; }
     .vertnav__item-name {
       font-family: Montserrat;
       font-style: normal;
@@ -285,6 +355,12 @@ body {
       margin-left: 0.8rem;
       color: #fcfffc;
       align-self: center; }
+  .vertnav__item:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3); }
+
+.vertnav a {
+  text-decoration: none; }
 
 .photos {
   grid-column: 5 / -1;

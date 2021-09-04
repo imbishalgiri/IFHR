@@ -3,15 +3,9 @@
   position: relative;
   height: 70vh;
   width: 100vw;
-  background: url(../assets/main-image.png);
-  background-size: cover;
+  overflow: hidden;
 
   &__image {
-    width: 100vw;
-
-    position: absolute;
-    top: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     &-overlay {
       position: absolute;
@@ -39,5 +33,57 @@
     line-height: 5.5rem;
   }
 }
+
+.slide {
+  height: 70vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute;
+  opacity: 0;
+  animation: fade 20s infinite;
+}
+
+.slide1{
+  background: url(../assets/main-image.png);
+  height: 70vh;
+
+}
+
+.slide2{
+  background: url(../assets/groupImg2.jpg);
+  animation-delay: 5s;
+}
+
+.slide3{
+  background: url(../assets/groupImg1.jpg) no-repeat center center;
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  
+  5% {
+    opacity: 1;
+  }
+  
+  25% {
+    opacity: 1;
+  }
+  
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+}
+
 
 
