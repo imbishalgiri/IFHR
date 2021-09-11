@@ -387,6 +387,20 @@ body {
 .vertnav a {
   text-decoration: none; }
 
+.vertnav__items-team {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.teams__dropdown {
+  display: none; }
+
+.teams__dropdown > *:hover {
+  color: #cafcce; }
+
+.teams__main:active {
+  color: black; }
+
 .photos {
   grid-column: 5 / -1;
   display: flex;
