@@ -96,12 +96,19 @@
         </div>
       </a>
 
-      <a href="commingsoon.html" title="teams">
-        <div class="vertnav__item">
-          <div class="vertnav__item-logo"></div>
-          <div class="vertnav__item-name">teams</div>
+      <div title="teams">
+        <div class="vertnav__item vertnav__items-team">
+          <div class="teams__head" style="display: flex; align-items: center;" onclick="teamClicked()">
+            <div class="vertnav__item-logo"></div>
+            <div class="vertnav__item-name teams__main">teams &dtrif;</div>
+          </div>
+      
+          <div class="vertnav__item-name teams__dropdown">
+            <div class="executive__team">Executive Team</div>
+            <div class="advisory__team">Advisory Team</div>
+          </div>
         </div>
-      </a>
+      </div>
 
       </div>
 
@@ -157,5 +164,18 @@
     </footer>
     <!-- FOOTER AREA -->
 
+  <script>
+    const teams = document.querySelector('.teams__head');
+    const dropdown = document.querySelector('.teams__dropdown');
+    
+    
+
+    function teamClicked(e) {
+      if(!dropdown.style.display)
+        dropdown.style.display = 'block';
+      else
+        dropdown.style.display = "";
+    }
+  </script>
   </body>
 </html>
