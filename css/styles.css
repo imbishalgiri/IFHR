@@ -395,6 +395,10 @@ body {
 .teams__dropdown {
   display: none; }
 
+.teams__dropdown a {
+  text-decoration: none;
+  color: #fff; }
+
 .teams__dropdown > *:hover {
   color: #cafcce; }
 
@@ -457,3 +461,50 @@ body {
 
 .objective__item > * {
   margin: 0 0.5rem; }
+
+.exec__card {
+  width: 20rem;
+  height: 25rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 17px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 17px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 17px 3px rgba(0, 0, 0, 0.75); }
+  .exec__card-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+  .exec__card-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; }
+  .exec__card-des {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-weight: 500; }
+
+.exec__card > * {
+  margin-bottom: 1rem; }
+
+.exec__teams {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 50rem; }
+
+.exec__teams > * {
+  margin: 4rem; }
+
+.advisory__card {
+  width: 20rem;
+  height: 25rem;
+  padding: 1rem; }

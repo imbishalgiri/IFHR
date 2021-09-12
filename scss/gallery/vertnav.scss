@@ -60,6 +60,11 @@
   display: none;  
 }
 
+.teams__dropdown a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .teams__dropdown > *:hover {
   color: #cafcce;
 }
