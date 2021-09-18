@@ -28,12 +28,16 @@ body {
   flex-direction: column;
   align-items: center;
   height: 10rem; }
+  .navbar__hamburger {
+    display: none; }
   .navbar__items {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #c6e8c5; }
+  .navbar__items--vertical {
+    display: none; }
   .navbar__items > * {
     text-decoration: none;
     margin: .5rem 1rem;
@@ -78,8 +82,8 @@ body {
     border-radius: 0.2rem; }
   .navbar__heading {
     color: #065fa6;
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.9rem;
+    font-weight: 600;
     margin: 0 3rem; }
   .navbar__homebtn {
     font-size: 1.2rem;
@@ -115,6 +119,88 @@ body {
 .aboutus:hover .aboutus__dropdown-item {
   display: block; }
 
+/*
+ RESPONSIVE CSS FOR THE NAVBAR GOES BELOW
+RESPONSIVE DESIGN FOR THE MOBILE SIZE
+*/
+@media (max-width: 768px) {
+  .navbar__items {
+    z-index: 2;
+    margin-left: 7rem; }
+  .navbar__items > * {
+    font-size: 1rem;
+    margin: .5rem; }
+  .navbar__right {
+    margin: 0 1rem; }
+  .navbar__right > * {
+    margin: 0.5rem;
+    padding: 0.3rem 0.2rem; }
+  .navbar__homebtn {
+    font-size: 1rem;
+    margin: 0; }
+  .navbar__heading {
+    font-size: 1.5rem;
+    width: 20rem; }
+  .navbar__texts {
+    align-self: flex-start; } }
+
+@media (max-width: 500px) {
+  .navbar__texts {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly; }
+  .navbar__logo {
+    width: 9rem; }
+  .navbar__right, .navbar .homelink {
+    display: none; }
+  .navbar__hamburger {
+    display: block;
+    background: #009245;
+    padding: .1rem .6rem;
+    border-radius: 10%;
+    margin-left: -1rem;
+    cursor: pointer; }
+  .navbar__items {
+    display: none; }
+    .navbar__items--vertical {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0; }
+  .nav_ham {
+    font-size: 2.7rem;
+    color: #fff; }
+  .vertical__items {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem; }
+  .vertical__items > * {
+    margin: 1rem 0;
+    font-size: 1.4rem; }
+  .aboutus__dropdown-item a {
+    font-size: 1rem; }
+  .navbar__items-5 {
+    text-decoration: none;
+    color: #3ba537; }
+  .cross {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer; }
+    .cross__icon {
+      font-size: 3.5rem; } }
+
+/* 
+END OF THE RESPONSIVE DESIGN 
+FOR MOBILE SIZE
+*/
 .main {
   grid-column: 1 / -1;
   position: relative;
@@ -177,6 +263,21 @@ body {
   70% {
     opacity: 0; } }
 
+@media (max-width: 500px) {
+  .main {
+    width: 100vw;
+    height: 50vh; }
+    .main__quotation {
+      width: 20rem;
+      height: 15rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem; }
+  .slide1, .slide2, .slide3 {
+    background-size: cover;
+    height: 100%; }
+  .slide {
+    height: 100%; } }
+
 .chairman {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
@@ -205,6 +306,31 @@ body {
     letter-spacing: 0.03em;
     color: #232725; }
 
+@media (max-width: 768px) {
+  .chairman {
+    margin: 2rem 1rem; }
+    .chairman__text-heading {
+      font-size: 2.5rem; }
+    .chairman__text p {
+      font-size: 1.5rem; } }
+
+@media (max-width: 500px) {
+  .chairman {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100vw; }
+    .chairman__text-heading {
+      font-size: 2rem; }
+    .chairman__text p {
+      font-size: 1.4rem; }
+    .chairman__image {
+      width: 100vw;
+      height: 40vh;
+      float: none;
+      margin: 0 0 3rem 0;
+      object-fit: cover;
+      object-position: 50% 0%; } }
+
 .glimpse {
   grid-column: 1 / -1;
   grid-row: 4 / 5;
@@ -227,6 +353,16 @@ body {
     flex: 1 0 25rem;
     width: 62.3rem;
     filter: drop-shadow(9px 16px 50px rgba(54, 47, 47, 0.25)); }
+
+@media (max-width: 500px) {
+  .glimpse {
+    padding: 2rem 2rem 5rem 2rem;
+    margin-bottom: -2rem; }
+    .glimpse__text {
+      font-size: 1.4rem; }
+    .glimpse__image {
+      width: 100%;
+      order: 1; } }
 
 .footer {
   background-color: #009245;
@@ -314,6 +450,28 @@ body {
 
 .social__head {
   font-size: 1.5rem; }
+
+/*
+
+	RESPONSIVE FOOTER AREA
+
+*/
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .nav > * {
+    text-align: center; }
+  .social__head {
+    text-align: center; } }
+
+@media (max-width: 500px) {
+  .nav > * {
+    font-weight: 500; }
+  .submit__btn {
+    margin-top: 2rem; } }
 
 .gallery {
   position: relative;

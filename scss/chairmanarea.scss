@@ -33,3 +33,46 @@
     }
   }
 }
+
+
+
+@media (max-width: 768px) {
+
+  .chairman {
+    margin: 2rem 1rem;
+
+    &__text-heading {
+      font-size: 2.5rem;
+    }
+
+    &__text p {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  .chairman {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100vw;
+
+    &__text-heading {
+      font-size: 2rem;
+    }
+
+    &__text p {
+      font-size: 1.4rem;
+    }
+
+    &__image {
+      width: 100vw;
+      height: 40vh;
+      float: none;
+      margin: 0 0 3rem 0;
+      object-fit: cover;
+      object-position: 50% 0%;
+    }
+  }
+}

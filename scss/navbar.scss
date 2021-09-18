@@ -6,6 +6,10 @@
     align-items: center;
     height: 10rem;
 
+    &__hamburger {
+        display: none;
+    }
+
     &__items {
         width: 100vw;
         display: flex;
@@ -13,6 +17,10 @@
         justify-content: center;
         background-color: #c6e8c5;
 
+    }
+
+    &__items--vertical {
+        display: none;
     }
     
 
@@ -76,8 +84,8 @@
 
     &__heading {
         color: #065fa6;
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 1.9rem;
+        font-weight: 600;
         margin: 0 3rem;
     }
 
@@ -133,3 +141,143 @@
     display: block;
 }
 
+
+
+
+
+/*
+ RESPONSIVE CSS FOR THE NAVBAR GOES BELOW
+RESPONSIVE DESIGN FOR THE MOBILE SIZE
+*/
+
+@media (max-width: 768px) {
+
+    .navbar__items {
+        z-index: 2;
+        margin-left: 7rem;
+    }
+
+    .navbar__items > * {
+        font-size: 1rem;
+        margin: .5rem;
+    }
+
+    .navbar__right {
+        margin: 0 1rem;
+
+    }
+
+    .navbar__right > * {
+        margin: 0.5rem;
+        padding: 0.3rem 0.2rem;
+    }
+
+    .navbar__homebtn {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .navbar__heading {
+        font-size: 1.5rem;
+        width: 20rem;
+
+    }
+
+    .navbar__texts {
+        align-self: flex-start;
+
+    }
+    
+} 
+
+
+@media(max-width: 500px) {
+    .navbar {
+
+        &__texts {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &__logo {
+            width: 9rem;
+
+        }
+
+        &__right, .homelink {
+            display: none;
+        }
+
+        &__hamburger {
+            display: block;
+            background: #009245;
+            padding: .1rem .6rem;
+            border-radius: 10%;
+            margin-left: -1rem;
+            cursor: pointer;
+        }
+
+        &__items {
+            display: none;
+
+            &--vertical {
+                // display: flex;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+            }
+        }
+
+    }
+
+    .nav_ham {
+        font-size: 2.7rem;
+        color: #fff;
+    }
+
+    .vertical__items {
+        height: 80vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    .vertical__items > * {
+        margin: 1rem 0;
+        font-size: 1.4rem;
+    }
+
+    .aboutus__dropdown-item a {
+        font-size: 1rem;
+    }
+
+    .navbar__items-5 {
+        text-decoration: none;
+        color: #3ba537;
+    }
+
+    .cross {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+
+        &__icon {
+            font-size: 3.5rem;
+        }
+    }
+
+
+}
+/* 
+END OF THE RESPONSIVE DESIGN 
+FOR MOBILE SIZE
+*/

@@ -86,4 +86,25 @@
 }
 
 
+@media (max-width: 500px) {
+  .main {
+    width: 100vw;
+    height: 50vh;
 
+    &__quotation {
+      width: 20rem;
+      height: 15rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  .slide1, .slide2, .slide3 {
+    background-size: cover;
+    height: 100%;
+  }
+
+  .slide {
+    height: 100%;
+  }
+}
