@@ -41,7 +41,8 @@ body {
     justify-content: center;
     background-color: #c6e8c5; }
   .navbar__items--vertical {
-    display: none; }
+    display: none;
+    height: 100vh; }
   .navbar__items > * {
     text-decoration: none;
     margin: .5rem 1rem;
