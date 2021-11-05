@@ -74,10 +74,15 @@
     &__right > * {
         background: #009245;
         color: #fff;
-        padding: 0.8rem;
+        padding: 0.5rem 0.8rem;
         margin: 0 1rem;
         cursor: pointer;
-        border-radius: 0.2rem;
+        border-radius: 2rem;
+        transition: 0.2s linear;
+    }
+
+    &__right > *:hover {
+        background: #034623;
     }
 
 
@@ -97,7 +102,48 @@
         margin: 0 .5rem;
     }
 
+    &__quicklinkbtn {
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    &__quicklinkbtn:hover .quicklink__dropdown {
+        display: flex;
+    }
+
+    &__careerbtn {
+        font-size: 1.5rem;
+        &-inner {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
 }
+
+.quicklink__dropdown {
+    position: absolute;
+    background: #fff;
+    width: 18rem;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+
+
+    &-item {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        color: royalblue;
+    }
+
+    &-item:hover {
+        background: #c6e8c5;
+    }
+}
+
+
 
 .homelink {
     text-decoration: none;
@@ -191,8 +237,10 @@ RESPONSIVE DESIGN FOR THE MOBILE SIZE
 } 
 
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .navbar {
+
+        width: 100vw;
 
         &__texts {
             width: 100vw;
@@ -214,7 +262,7 @@ RESPONSIVE DESIGN FOR THE MOBILE SIZE
             background: #009245;
             padding: .1rem .6rem;
             border-radius: 10%;
-            margin-right: 2rem;
+            margin-right: 5rem;
             cursor: pointer;
         }
 

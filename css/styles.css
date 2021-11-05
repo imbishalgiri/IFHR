@@ -21,6 +21,10 @@ body {
   grid-template-rows: 12rem min-content min-content min-content;
   background-color: #f1f1f1; }
 
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
 .navbar {
   grid-column: 1 / -1;
   padding: 5px;
@@ -76,10 +80,13 @@ body {
   .navbar__right > * {
     background: #009245;
     color: #fff;
-    padding: 0.8rem;
+    padding: 0.5rem 0.8rem;
     margin: 0 1rem;
     cursor: pointer;
-    border-radius: 0.2rem; }
+    border-radius: 2rem;
+    transition: 0.2s linear; }
+  .navbar__right > *:hover {
+    background: #034623; }
   .navbar__heading {
     color: #065fa6;
     font-size: 1.9rem;
@@ -90,6 +97,32 @@ body {
     margin: 0 2rem; }
   .navbar__homebtn > * {
     margin: 0 .5rem; }
+  .navbar__quicklinkbtn {
+    position: relative;
+    font-size: 1.5rem; }
+  .navbar__quicklinkbtn:hover .quicklink__dropdown {
+    display: flex; }
+  .navbar__careerbtn {
+    font-size: 1.5rem; }
+    .navbar__careerbtn-inner {
+      text-decoration: none;
+      color: #fff; }
+
+.quicklink__dropdown {
+  position: absolute;
+  background: #fff;
+  width: 18rem;
+  z-index: 3;
+  display: none;
+  flex-direction: column; }
+  .quicklink__dropdown-item {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: royalblue; }
+  .quicklink__dropdown-item:hover {
+    background: #c6e8c5; }
 
 .homelink {
   text-decoration: none;
@@ -144,32 +177,34 @@ RESPONSIVE DESIGN FOR THE MOBILE SIZE
   .navbar__texts {
     align-self: flex-start; } }
 
-@media (max-width: 500px) {
-  .navbar__texts {
-    width: 100vw;
-    display: flex;
-    justify-content: space-evenly; }
-  .navbar__logo {
-    width: 9rem; }
-  .navbar__right, .navbar .homelink {
-    display: none; }
-  .navbar__hamburger {
-    display: block;
-    background: #009245;
-    padding: .1rem .6rem;
-    border-radius: 10%;
-    margin-right: 2rem;
-    cursor: pointer; }
-  .navbar__items {
-    display: none; }
-    .navbar__items--vertical {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0; }
+@media (max-width: 600px) {
+  .navbar {
+    width: 100vw; }
+    .navbar__texts {
+      width: 100vw;
+      display: flex;
+      justify-content: space-evenly; }
+    .navbar__logo {
+      width: 9rem; }
+    .navbar__right, .navbar .homelink {
+      display: none; }
+    .navbar__hamburger {
+      display: block;
+      background: #009245;
+      padding: .1rem .6rem;
+      border-radius: 10%;
+      margin-right: 5rem;
+      cursor: pointer; }
+    .navbar__items {
+      display: none; }
+      .navbar__items--vertical {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0; }
   .nav_ham {
     font-size: 2.7rem;
     color: #fff; }
@@ -212,12 +247,14 @@ FOR MOBILE SIZE
     width: 100%;
     height: 100%;
     background: rgba(17, 82, 16, 0.31);
-    backdrop-filter: blur(2.5px); }
+    backdrop-filter: blur(2.5px);
+    filter: blur(2.5px); }
   .main__quotation {
     position: absolute;
     background-color: #009245;
-    width: 25rem;
-    height: 25rem;
+    width: 27rem;
+    height: 27rem;
+    padding: 2rem;
     top: 21%;
     left: 5%;
     z-index: 10;
@@ -226,7 +263,8 @@ FOR MOBILE SIZE
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 4rem;
+    border-radius: 0 5rem 0 5rem;
     line-height: 5.5rem; }
 
 .slide {
@@ -266,14 +304,13 @@ FOR MOBILE SIZE
 @media (max-width: 500px) {
   .main {
     width: 100vw;
-    height: 50vh; }
+    height: 40vh; }
     .main__quotation {
       width: 20rem;
       height: 15rem;
       font-size: 3.5rem;
       line-height: 3.5rem; }
   .slide1, .slide2, .slide3 {
-    background-size: cover;
     height: 100%; }
   .slide {
     height: 100%; } }
@@ -314,7 +351,7 @@ FOR MOBILE SIZE
     .chairman__text p {
       font-size: 1.5rem; } }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .chairman {
     margin: 1rem;
     padding: 1rem;
@@ -322,9 +359,10 @@ FOR MOBILE SIZE
     .chairman__text-heading {
       font-size: 2rem; }
     .chairman__text p {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      margin-right: 3rem; }
     .chairman__image {
-      width: 100vw;
+      width: 100%;
       height: 40vh;
       float: none;
       margin: 0 0 3rem 0;
@@ -490,7 +528,8 @@ FOR MOBILE SIZE
   .gallery__image {
     position: absolute;
     width: 100vw;
-    height: 100%; }
+    height: 100%;
+    object-fit: cover; }
   .gallery__overlay {
     position: absolute;
     width: 100vw;
@@ -508,12 +547,20 @@ FOR MOBILE SIZE
     text-align: center;
     color: #e3e7ed; }
 
+@media (max-width: 500px) {
+  .gallery__text {
+    font-size: 2rem;
+    text-align: center;
+    padding: .5rem; }
+  .gallery__overlay {
+    font-size: 2rem; } }
+
 .vertnav {
-  grid-column: 2 / 5;
-  height: 78.4rem;
+  min-width: 17rem;
   margin-top: 3rem;
   padding-top: 5rem;
-  transform: translateX(-15rem);
+  margin-left: 5rem;
+  margin-top: 3rem;
   background-color: #065fa6;
   color: #fcfffc;
   display: flex;
@@ -563,13 +610,15 @@ FOR MOBILE SIZE
 .teams__main:active {
   color: black; }
 
+@media (max-width: 500px) {
+  .vertnav {
+    display: none; } }
+
 .photos {
-  grid-column: 5 / -1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-top: 4rem;
-  margin-left: -12rem; }
+  margin-top: 4rem; }
   .photos__item {
     width: 25.3rem;
     margin: 2rem;
@@ -590,10 +639,23 @@ FOR MOBILE SIZE
   height: 29rem;
   object-fit: cover; }
 
+.gallery__wrap {
+  grid-column: 1 / -1;
+  display: flex; }
+
+@media (max-width: 500px) {
+  .photos {
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
+    .photos__item {
+      width: 23rem;
+      margin: 1rem;
+      padding: 0; } }
+
 .intro {
-  grid-column: 5 / -1;
-  margin-top: 3rem;
-  margin-left: -8rem; }
+  grid-column: 3 / -1;
+  margin-top: 3rem; }
   .intro__vision-heading {
     color: #078604;
     font-size: 3.2rem;
@@ -619,6 +681,34 @@ FOR MOBILE SIZE
 
 .objective__item > * {
   margin: 0 0.5rem; }
+
+.notices__logo {
+  margin-top: 0.7rem; }
+
+/*
+	ANIMATION OF THE NOT AVAILABLE IS HERE
+*/
+.animate-text {
+  font-size: 2rem;
+  animation: RotateUpAndDown 1s linear infinite;
+  animation-direction: alternate; }
+
+@keyframes RotateUpAndDown {
+  from {
+    transform: rotate(5deg); }
+  to {
+    transform: rotate(-5deg); } }
+
+@media (max-width: 500px) {
+  .intro {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    margin-bottom: 4rem; } }
+
+.teams__wrapper {
+  grid-column: 1 / -1;
+  width: 100vw;
+  display: flex; }
 
 .exec__card {
   width: 20rem;
@@ -656,8 +746,7 @@ FOR MOBILE SIZE
 .exec__teams {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
-  height: 50rem; }
+  flex-wrap: wrap; }
 
 .exec__teams > * {
   margin: 4rem; }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- styling is in introduction.scss file -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,8 +29,18 @@
         <div class="navbar__heading">Innovative Foundation For Health and Research</div>
         <a href="../index.html" title="" class="homelink"><div class="navbar__homebtn"><i class="fas fa-home"></i>Home</div></a>
         <div class="navbar__right">
-          <div class="navbar__careerbtn">career</div>
-          <div class="navbar__quicklinkbtn">quicklink</div>
+          <div class="navbar__careerbtn"><a class="navbar__careerbtn-inner" href="careers.html">career</a></div>
+          <div class="navbar__quicklinkbtn">quicklink
+            <div class="quicklink__dropdown">
+             <a class="quicklink__dropdown-item" href="https://www.ceapred.org.np" title="item1">ceapred nepal</a>
+             <a class="quicklink__dropdown-item" href="https://www.mail.google.com" title="item2">google mail</a>
+             <a class="quicklink__dropdown-item" href="www.ain.org.np" title="item3">association of ingo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar__hamburger">
+          <i class="fa fa-bars nav_ham" aria-hidden="true"></i>
         </div>
       </div>
       <div class="navbar__items">
@@ -55,7 +66,7 @@
           </div>
         </div>
         <a href="#" class="navbar__items-5">publication</a>
-        <a href="#" class="navbar__items-5">notice</a>
+        <a href="notices.html" class="navbar__items-5">notice</a>
         <a href="gallery.html" class="navbar__items-5">gallery</a>
         <a href="#" class="navbar__items-5">video</a>
       </div>
@@ -68,7 +79,7 @@
         src="../assets/vision_image.png"
         alt="image for gallery page"
       />
-      <div class="gallery__overlay">Vision and Mission of <span style="color:#009245;"> &nbsp; IFHR</span> </div>
+      <div class="gallery__overlay">Objectives of <span style="color:#009245;"> &nbsp; IFHR</span> </div>
     </div>
 
 

@@ -1,10 +1,8 @@
 .photos {
-  grid-column: 5 / -1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 4rem;
-  margin-left: -12rem;
 
   &__item {
     width: 25.3rem;
@@ -29,4 +27,24 @@
 .photos > a > img {
   height: 29rem;
   object-fit: cover;
+}
+
+.gallery__wrap {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .photos {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+
+    &__item {
+      width: 23rem;
+      margin: 1rem;
+      padding: 0;
+    }
+  }
 }

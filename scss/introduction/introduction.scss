@@ -1,7 +1,6 @@
 .intro {
-	grid-column: 5 / -1;
+	grid-column: 3 / -1;
 	margin-top: 3rem;
-	margin-left: -8rem;
 
 	&__vision {
 
@@ -52,8 +51,37 @@
 	}
 }
 
-// .objective:not(:first-child) {
-// 	mar
-// }
+.notices__logo {
+	margin-top: 0.7rem;
+}
+
+/*
+	ANIMATION OF THE NOT AVAILABLE IS HERE
+*/ 
+.animate-text {
+	font-size: 2rem;
+	animation: RotateUpAndDown 1s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes RotateUpAndDown {
+	from {
+		transform: rotate(5deg);
+	}
+
+	to {
+		transform: rotate(-5deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.intro {
+		grid-column: 1 / -1;
+		padding: 2rem;
+		margin-bottom: 4rem;
+	}
+}
+
+
 
 
