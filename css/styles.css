@@ -200,7 +200,7 @@ RESPONSIVE DESIGN FOR THE MOBILE SIZE
       display: none; }
       .navbar__items--vertical {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
