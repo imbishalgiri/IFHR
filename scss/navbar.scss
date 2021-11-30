@@ -1,197 +1,187 @@
 .navbar {
-    grid-column: 1 / -1;
-    padding: 5px;
+  grid-column: 1 / -1;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10rem;
+
+  &__hamburger {
+    display: none;
+  }
+
+  &__items {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 10rem;
+    justify-content: center;
+    background-color: $color-primary;
+  }
 
-    &__hamburger {
-        display: none;
+  &__items--vertical {
+    display: none;
+    height: 100vh;
+  }
+
+  &__items > * {
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    padding: 0.3rem;
+    font-family: "Open Sans", "sans-serif";
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-white;
+    text-transform: uppercase;
+    transition: all ease 0.2s;
+  }
+
+  &__items > *:hover {
+    border-bottom: 1.5px solid $color-white;
+  }
+
+  &__btn {
+    color: $color-white;
+    background: $color-primary;
+    width: 12.7rem;
+    height: 4rem;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 8rem;
+  }
+
+  &__texts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+  }
+
+  &__right {
+    display: flex;
+    margin: 0 6rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__right > * {
+    background: $color-primary;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: 0.2s linear;
+  }
+
+  &__right > *:hover {
+    background: $color-primary-faded;
+  }
+
+  &__heading {
+    font-family: "Open Sans", "sans-serif";
+    color: $color-secondary;
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin: 0 3rem;
+  }
+
+  &__homebtn {
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    color: $color-white;
+    background-color: $color-primary;
+    padding: 0.5rem;
+    border-radius: 100px;
+  }
+  &__homebtn > * {
+    margin: 0 0.5rem;
+  }
+
+  &__quicklinkbtn {
+    position: relative;
+    font-size: 1.5rem;
+  }
+
+  &__quicklinkbtn:hover .quicklink__dropdown {
+    display: flex;
+  }
+
+  &__careerbtn {
+    font-size: 1.5rem;
+    &-inner {
+      text-decoration: none;
+      color: #fff;
     }
-
-    &__items {
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #c6e8c5;
-
-    }
-
-    &__items--vertical {
-        display: none;
-        height: 100vh;
-
-    }
-    
-
-    &__items > *{
-        text-decoration: none;
-        margin: .5rem 1rem;
-        padding: .3rem;
-        font-family: Montserrat;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color:#3ba537;
-        text-transform: uppercase;
-        transition: all ease .2s; 
-            
-    }
-
-    &__items>*:hover {
-        border-bottom: 1.5px solid #3ba537;
-
-    }
-
-    &__btn {
-        color: #fff;
-        background: #009245;
-        width: 12.7rem;
-        height: 4rem;
-        padding: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Montserrat;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin-right: 8rem;   
-    }
-
-    &__texts {
-        display: flex;
-        align-items: center;
-        margin: 0 0 1rem 0;
-    }
-
-    &__right {
-        display: flex;
-        margin: 0 6rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__right > * {
-        background: #009245;
-        color: #fff;
-        padding: 0.5rem 0.8rem;
-        margin: 0 1rem;
-        cursor: pointer;
-        border-radius: 2rem;
-        transition: 0.2s linear;
-    }
-
-    &__right > *:hover {
-        background: #034623;
-    }
-
-
-
-    &__heading {
-        color: #065fa6;
-        font-size: 1.9rem;
-        font-weight: 600;
-        margin: 0 3rem;
-    }
-
-    &__homebtn {
-        font-size: 1.2rem;
-        margin: 0 2rem;
-    }
-    &__homebtn > * {
-        margin: 0 .5rem;
-    }
-
-    &__quicklinkbtn {
-        position: relative;
-        font-size: 1.5rem;
-    }
-
-    &__quicklinkbtn:hover .quicklink__dropdown {
-        display: flex;
-    }
-
-    &__careerbtn {
-        font-size: 1.5rem;
-        &-inner {
-            text-decoration: none;
-            color: #fff;
-        }
-    }
-
+  }
 }
 
 .quicklink__dropdown {
-    position: absolute;
-    background: #fff;
-    width: 18rem;
-    z-index: 3;
-    display: none;
-    flex-direction: column;
+  position: absolute;
+  background: #fff;
+  width: 18rem;
+  z-index: 3;
+  display: none;
+  flex-direction: column;
 
+  &-item {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: royalblue;
+  }
 
-    &-item {
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-        padding: 0.5rem;
-        color: royalblue;
-    }
-
-    &-item:hover {
-        background: #c6e8c5;
-    }
+  &-item:hover {
+    background: #c6e8c5;
+  }
 }
-
-
 
 .homelink {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
-
 .aboutus {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  z-index: 11;
 
-    &__dropdown {
-        cursor: pointer;
+  &__dropdown {
+    cursor: pointer;
 
-        &-item {
-          display: none;
-          position: absolute;
-          background-color: #f1f1f1;
-          
-          width: 20rem;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-        }
+    &-item {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
 
-        &-item a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 1.2rem;
-        }
-
-        &-item a:hover {
-            background: #c6e8c5;
-        }
+      width: 20rem;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
     }
 
+    &-item a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    &-item a:hover {
+      background: #c6e8c5;
+    }
+  }
 }
 
 .aboutus:hover .aboutus__dropdown-item {
-    display: block;
+  display: block;
 }
-
-
-
-
 
 /*
  RESPONSIVE CSS FOR THE NAVBAR GOES BELOW
@@ -199,133 +189,123 @@ RESPONSIVE DESIGN FOR THE MOBILE SIZE
 */
 
 @media (max-width: 768px) {
+  .navbar__items {
+    z-index: 2;
+    margin-left: 7rem;
+  }
 
-    .navbar__items {
-        z-index: 2;
-        margin-left: 7rem;
+  .navbar__items > * {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  .navbar__right {
+    margin: 0 1rem;
+  }
+
+  .navbar__right > * {
+    margin: 0.5rem;
+    padding: 0.3rem 0.2rem;
+  }
+
+  .navbar__homebtn {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .navbar__heading {
+    font-size: 1.2rem;
+    width: 20rem;
+  }
+
+  .navbar__texts {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 100vw;
+
+    &__texts {
+      width: 100vw;
+      display: flex;
+      justify-content: space-evenly;
     }
 
-    .navbar__items > * {
-        font-size: 1rem;
-        margin: .5rem;
+    &__logo {
+      width: 9rem;
     }
 
-    .navbar__right {
-        margin: 0 1rem;
-
+    &__right,
+    .homelink {
+      display: none;
     }
 
-    .navbar__right > * {
-        margin: 0.5rem;
-        padding: 0.3rem 0.2rem;
+    &__hamburger {
+      display: block;
+      background: #009245;
+      padding: 0.1rem 0.6rem;
+      border-radius: 10%;
+      margin-right: 5rem;
+      cursor: pointer;
     }
 
-    .navbar__homebtn {
-        font-size: 1rem;
+    &__items {
+      display: none;
+
+      &--vertical {
+        // display: flex;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         margin: 0;
+      }
     }
+  }
 
-    .navbar__heading {
-        font-size: 1.2rem;
-        width: 20rem;
+  .nav_ham {
+    font-size: 2.7rem;
+    color: #fff;
+  }
 
+  .vertical__items {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+
+  .vertical__items > * {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+
+  .aboutus__dropdown-item a {
+    font-size: 1rem;
+  }
+
+  .navbar__items-5 {
+    text-decoration: none;
+    color: #3ba537;
+  }
+
+  .cross {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+
+    &__icon {
+      font-size: 3.5rem;
     }
-
-    .navbar__texts {
-        align-self: flex-start;
-
-    }
-    
-} 
-
-
-@media(max-width: 600px) {
-    .navbar {
-
-        width: 100vw;
-
-        &__texts {
-            width: 100vw;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        &__logo {
-            width: 9rem;
-
-        }
-
-        &__right, .homelink {
-            display: none;
-        }
-
-        &__hamburger {
-            display: block;
-            background: #009245;
-            padding: .1rem .6rem;
-            border-radius: 10%;
-            margin-right: 5rem;
-            cursor: pointer;
-        }
-
-        &__items {
-            display: none;
-
-            &--vertical {
-                // display: flex;
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: 0;
-            }
-        }
-
-    }
-
-    .nav_ham {
-        font-size: 2.7rem;
-        color: #fff;
-    }
-
-    .vertical__items {
-        height: 80vh;
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-top: 2rem;
-    }
-
-    .vertical__items > * {
-        margin: 1rem 0;
-        font-size: 1.4rem;
-    }
-
-    .aboutus__dropdown-item a {
-        font-size: 1rem;
-    }
-
-    .navbar__items-5 {
-        text-decoration: none;
-        color: #3ba537;
-    }
-
-    .cross {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        cursor: pointer;
-
-        &__icon {
-            font-size: 3.5rem;
-        }
-    }
-
-
+  }
 }
 /* 
 END OF THE RESPONSIVE DESIGN 

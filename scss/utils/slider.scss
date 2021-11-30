@@ -1,0 +1,19 @@
+#splide01 {
+  grid-column: 1 / -1 !important;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splide__slide {
+  width: 100vw !important;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.splide__progress__bar {
+  height: 3px;
+  background: rgb(13, 189, 65);
+}

@@ -32,3 +32,11 @@
 
 
 })();
+
+
+
+
+// loading animation before page loads in javascript
+window.addEventListener('load', (event) => {
+	document.querySelector('.loader-curtain').style.display='none';
+})

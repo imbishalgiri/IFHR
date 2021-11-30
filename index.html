@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="assets/nav-logo.png"/>
     <link rel="stylesheet" href="css/styles.css " />
+    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400;500;900&family=Cookie&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;900&family=Cookie&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>IFHR</title>
   </head>
   <body class="container">
+    <div class="loader-curtain"></div>
 
     <!-- NOTICE AREA  -->
 
@@ -115,31 +118,22 @@
     </nav>
     <!-- END OF NAVBAR -->
 
-    <!-- DISPLAY AREA -->
-    <main class="main">
-      <!-- <img src="#" alt="#" class="main__image"> -->
-      
-      <!-- <img src="assets/main-image.png" alt="helping out patient" class="main__image"> -->
-      
-      <div class="slide slide1">
-        <div class="main__image-overlay"></div>
-        <div class="main__quotation">
-          "Shaping<br />&nbsp;future of<br />&nbsp;health care."
+    <div class="splide">
+      <div class="main__quotation">
+        "Shaping<br />future of<br />health care."
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <img src="assets/main-image.png" alt="first image" class="splide__slide">
+          <img src="assets/groupImg1.jpg" alt="first image" class="splide__slide">
+          <img src="assets/groupImg2.jpg" alt="second image" class="splide__slide">
+        </ul>
+      </div>
+      <div class="splide__progress">
+        <div class="splide__progress__bar">
         </div>
       </div>
-      <div class="slide slide2">
-        <div class="main__image-overlay"></div>
-        <div class="main__quotation">
-          "Shaping<br />future of<br />health care."
-        </div>
-      </div>
-      <div class="slide slide3">
-        <div class="main__image-overlay"></div>
-        <div class="main__quotation">
-          "Shaping<br />future of<br />health care."
-        </div>
-      </div>
-    </main>
+    </div>
     <!-- END OF DISPLAY AREA -->
 
     <!-- CHAIRMAN AREA -->
@@ -255,14 +249,22 @@
             <p class="copyright">
                 &copy; Copyright 2020 by Innovative Foundation for Health and Research (IFHR)
             </p>
-
-
-
-
-
     </footer>
-    <!-- END OF FOOTER SECTION -->
+    <script>
 
+      document.addEventListener( 'DOMContentLoaded', function() {
+        var splide = new Splide( '.splide', {
+          type   : 'loop',
+           autoplay: true
+        } );
+
+        splide.mount({ });
+        } );
+
+    </script>
+    <!-- END OF FOOTER SECTION -->
+    <script src="js/splide.min.js" type="text/javascript"></script>
+    <script src="path-to-the-script/splide-extension-intersection.min.js"></script>
      <script src="js/index.js" type="text/javascript" charset="utf-8" async defer></script>
   </body>
 </html>

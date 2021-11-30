@@ -17,3 +17,18 @@ body {
   box-sizing: border-box;
   color: #232725;
 }
+
+$color-primary: #009245;
+$color-primary-faded: #69ecab;
+$color-secondary: #0d84e3;
+$font-color: #232725;
+$color-white: #fff;
+
+.loader-curtain {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  z-index: 20;
+}

@@ -4,7 +4,7 @@
   padding-top: 5rem;
   margin-left: 5rem;
   margin-top: 3rem;
-  background-color: #065fa6;
+  background-color: $color-secondary;
   color: #fcfffc;
   display: flex;
   flex-direction: column;
@@ -33,20 +33,17 @@
       color: #fcfffc;
       align-self: center;
     }
-
   }
 
   &__item:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
   }
-
 }
 
 .vertnav a {
   text-decoration: none;
 }
-
 
 .vertnav__items-team {
   display: flex;
@@ -54,10 +51,8 @@
   align-items: flex-start;
 }
 
-
-
 .teams__dropdown {
-  display: none;  
+  display: none;
 }
 
 .teams__dropdown a {
@@ -69,14 +64,12 @@
   color: #cafcce;
 }
 
-
 .teams__main:active {
   color: black;
 }
 
-
 //  responsive breakpoint for until 500
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .vertnav {
     display: none;
   }

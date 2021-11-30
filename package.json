@@ -10,9 +10,7 @@
   "author": "Bishal Giri",
   "license": "ISC",
   "dependencies": {
-    "lightgallery.js": "^1.4.0"
-  },
-  "devDependencies": {
-    "node-sass": "^5.0.0"
+    "lightgallery.js": "^1.4.0",
+    "node-sass": "^6.0.1"
   }
 }
