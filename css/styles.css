@@ -619,7 +619,9 @@ FOR MOBILE SIZE
 
 .teams__dropdown a {
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  display: flex;
+  flex-direction: column; }
 
 .teams__dropdown > *:hover {
   color: #cafcce; }
