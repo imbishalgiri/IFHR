@@ -32,3 +32,7 @@ $color-white: #fff;
   position: absolute;
   z-index: 20;
 }
+
+.quite__blurry--div {
+  filter: blur(4px);
+}

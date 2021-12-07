@@ -123,10 +123,30 @@
         "Shaping<br />future of<br />health care."
       </div>
       <div class="splide__track">
+        <div class="splide__track--overlay"></div>
         <ul class="splide__list">
-          <img src="assets/main-image.png" alt="first image" class="splide__slide">
-          <img src="assets/groupImg1.jpg" alt="first image" class="splide__slide">
-          <img src="assets/groupImg2.jpg" alt="second image" class="splide__slide">
+
+          <div class="splide__slide">
+            <div class="splide__caption">I am caption</div>
+            <div class="blurry__div">
+              <img src="assets/main-image.png" alt="first image" class="splide__slide">
+            </div>
+          </div>
+
+          <div class="splide__slide">
+            <div class="splide__caption">I am caption</div>
+            <div class="blurry__div">
+              <img src="assets/groupImg1.jpg" alt="first image" class="splide__slide">
+            </div>
+          </div>
+
+          <div class="splide__slide">
+            <div class="splide__caption">I am caption</div>
+            <div class="blurry__div">
+              <img src="assets/groupImg2.jpg" alt="first image" class="splide__slide">
+            </div>
+          </div>
+          
         </ul>
       </div>
       <div class="splide__progress">
@@ -141,11 +161,19 @@
       <div class="chairman__text">
         <div class="chairman__text-heading">Chairman Message</div>
         
-          <img
-          src="assets/chairman-img.jpeg"
-          alt="chairman image"
-          class="chairman__image"
-        />
+          <div class="chairman__parent chairman__image">
+                <div class="chairman__overlay">
+                  <div>Dr. Arun Shahi</div>
+                  <div>(Chairman of IFHR)</div>
+
+
+                </div>
+                <img
+                  src="assets/chairman-img.jpeg"
+                  alt="chairman image"
+                  class="chairman__image children__image"
+                />
+          </div>
         
         
         <p>
@@ -191,11 +219,15 @@
 
     <!-- START OF GLIMPSE AREA -->
     <div class="glimpse">
-      <img
+
+      <div class="glimpse__image">
+        <div class="glimpse__image--overlay">Third AGM of ifhr</div>
+        <img
         src="assets/glimpse-image.png"
         alt="image of group members having meeting"
-        class="glimpse__image"
+        class="glimpse__image-img"
       />
+      </div>
       <div class="glimpse__text">
         <div class="chairman__text-heading">A glimpse of IFHR</div>
         <strong>Innovative Foundation for Heath and Research (IFHR),</strong>

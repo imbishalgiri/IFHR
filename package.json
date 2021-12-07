@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-sass": "node-sass scss/bootstrap.scss css/styles.css -w"
+    "compile-sass": "sass --watch scss/bootstrap.scss css/styles.css"
   },
   "author": "Bishal Giri",
   "license": "ISC",
   "dependencies": {
-    "lightgallery.js": "^1.4.0",
-    "node-sass": "^6.0.1"
+    "lightgallery.js": "^1.4.0"
   }
 }
